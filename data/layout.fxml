@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="842.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Files.Controller">
+   <center>
+      <ScrollPane onScroll="#zoom" pannable="true" prefHeight="879.0" prefWidth="794.0" BorderPane.alignment="CENTER">
+         <content>
+            <Group>
+               <children>
+                  <Pane fx:id="pane1" onScroll="#zoom" prefHeight="1129.0" prefWidth="1308.0" />
+               </children>
+            </Group>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <AnchorPane fx:id="pane" prefHeight="126.0" prefWidth="1164.0" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox fx:id="choicebox" layoutX="75.0" layoutY="10.0" prefHeight="25.0" prefWidth="234.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="10.0" />
+            <Slider fx:id="slider" blockIncrement="1.0" layoutX="114.0" layoutY="111.0" majorTickUnit="1.0" max="500.0" min="1.0" minorTickCount="1" onMouseReleased="#dragged" prefHeight="14.0" prefWidth="221.0" snapToTicks="true" value="250.0" AnchorPane.leftAnchor="114.0" AnchorPane.topAnchor="111.0" />
+            <Label fx:id="timeLabel" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+            <ScrollPane layoutX="14.0" layoutY="35.0" pannable="true" prefHeight="74.0" prefWidth="912.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="35.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="130.0" prefWidth="2590.0">
+                     <children>
+                        <Label fx:id="itLabel" layoutX="13.0" layoutY="6.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="6.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label layoutX="15.0" layoutY="109.0" text="Simulation Speed :" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="109.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

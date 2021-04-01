@@ -1,0 +1,219 @@
+streets:
+- &1 name: "A"
+  start:
+    x: 150.0
+    y: 150.0
+  end:
+    x: 300.0
+    y: 150.0
+- &2 name: "B"
+  start:
+    x: 300.0
+    y: 150.0
+  end:
+    x: 300.0
+    y: 300.0
+- &3 name: "C"
+  start:
+    x: 150.0
+    y: 300.0
+  end:
+    x: 300.0
+    y: 300.0
+- &4 name: "D"
+  start:
+    x: 150.0
+    y: 150.0
+  end:
+    x: 150.0
+    y: 300.0
+- &5 name: "E"
+  start:
+    x: 300.0
+    y: 300.0
+  end:
+    x: 300.0
+    y: 450.0
+- &6 name: "F"
+  start:
+    x: 150.0
+    y: 450.0
+  end:
+    x: 300.0
+    y: 450.0
+- &7 name: "G"
+  start:
+    x: 150.0
+    y: 300.0
+  end:
+    x: 150.0
+    y: 450.0
+- &8 name: "H"
+  start:
+    x: 300.0
+    y: 450.0
+  end:
+    x: 300.0
+    y: 600.0
+- &9 name: "I"
+  start:
+    x: 150.0
+    y: 600.0
+  end:
+    x: 300.0
+    y: 600.0
+- &10 name: "J"
+  start:
+    x: 150.0
+    y: 450.0
+  end:
+    x: 150.0
+    y: 600.0
+- &11 name: "K"
+  start:
+    x: 300.0
+    y: 450.0
+  end:
+    x: 450.0
+    y: 450.0
+- &12 name: "L"
+  start:
+    x: 450.0
+    y: 450.0
+  end:
+    x: 600.0
+    y: 450.0
+- &13 name: "M"
+  start:
+    x: 450.0
+    y: 450.0
+  end:
+    x: 450.0
+    y: 600.0
+- &14 name: "N"
+  start:
+    x: 600.0
+    y: 450.0
+  end:
+    x: 600.0
+    y: 600.0
+- &15 name: "O"
+  start:
+    x: 450.0
+    y: 600.0
+  end:
+    x: 600.0
+    y: 600.0
+- &16 name: "P"
+  start:
+    x: 300.0
+    y: 600.0
+  end:
+    x: 450.0
+    y: 600.0
+- &17 name: "Q"
+  start:
+    x: 450.0
+    y: 600.0
+  end:
+    x: 600.0
+    y: 450.0
+- &18 name: "R"
+  start:
+    x: 300.0
+    y: 600.0
+  end:
+    x: 450.0
+    y: 450.0
+- &19 name: "S"
+  start:
+    x: 150.0
+    y: 600.0
+  end:
+    x: 300.0
+    y: 450.0
+- &20 name: "T"
+  start:
+    x: 150.0
+    y: 450.0
+  end:
+    x: 300.0
+    y: 300.0
+stops:
+- &21 stop_id: "Jedna"
+  stop_coordinates:
+    x: 225.0
+    y: 525.0
+  street: *19
+- &22 stop_id: "Dva"
+  stop_coordinates:
+    x: 375.0
+    y: 450.0
+  street: *11
+- &23 stop_id: "Tri"
+  stop_coordinates:
+    x: 525.0
+    y: 450.0
+  street: *12
+- &24 stop_id: "Styri"
+  stop_coordinates:
+    x: 225.0
+    y: 150.0
+  street: *1
+- &25 stop_id: "Pat"
+  stop_coordinates:
+    x: 300.0
+    y: 225.0
+  street: *2
+- &26 stop_id: "Sest"
+  stop_coordinates:
+    x: 300.0
+    y: 375.0
+  street: *5
+- &27 stop_id: "Sedem"
+  stop_coordinates:
+    x: 150.0
+    y: 225.0
+  street: *4
+- &28 stop_id: "Osem"
+  stop_coordinates:
+    x: 150.0
+    y: 375.0
+  street: *7
+- &29 stop_id: "Devat"
+  stop_coordinates:
+    x: 225.0
+    y: 600.0
+  street: *9
+bus:
+- velocity: 0.25
+  location:
+    x: 225.0
+    y: 525.0
+  path:
+    label: "Linka 21"
+    infrastructure:
+    - *19
+    - *11
+    - *12
+- velocity: 0.25
+  location:
+    x: 225.0
+    y: 150.0
+  path:
+    label: "Linka 11"
+    infrastructure:
+    - *1
+    - *2
+    - *5
+- velocity: 0.25
+  location:
+    x: 150.0
+    y: 225.0
+  path:
+    label: "Linka 31"
+    infrastructure:
+    - *4
+    - *7
+    - *10
+    - *9

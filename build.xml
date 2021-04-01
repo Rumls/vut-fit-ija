@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project default="run" name="Woohoo">
+
+  <path id="xpauld00.module.production.classpath">
+    <fileset dir="lib">
+    </fileset>
+  </path>
+
+    <target name="compile_code">
+        <javac includeantruntime="false" destdir="build">
+            <src path="src"/>
+            <classpath refid="xpauld00.module.production.classpath"/>
+        </javac>
+		<copy todir="build/main/Files">
+			<fileset dir="data"/>
+		</copy>
+    </target>
+    <target name="compile" depends="compile_code">
+        <jar destfile="dest/ija-app.jar" basedir="build">
+            <manifest>
+              <attribute name="Main-Class" value="main.main"/>
+            </manifest>
+			<zipgroupfileset dir="lib" includes="**/*.jar"/>
+        </jar>
+    </target>
+    <target name="run">
+        <java jar="dest/ija-app.jar" fork="true"></java>
+    </target>
+</project>
